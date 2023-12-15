@@ -1,0 +1,12 @@
+.each-data{
+    border: 1px solid black;
+    list-style-type: none;
+}
+
+.list-container{
+    border: 2px solid red;
+}
+
+.heading{
+    border: 2px solid green;
+}
