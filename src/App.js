@@ -1,12 +1,20 @@
 import React from "react";
 import './App.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import StudentDetails from "./component/StudentDetails";
+import Counter from "./components/Counter";
+import UserInput from "./components/UserInput";
+import ToggleMessage from "./components/ToggleMessage";
+import ArrayComponent from "./components/ArrayComponent";
+import StudentDetails from "./components/StudentDetails";
+
 
 const App = () =>{
     return(
        <div className="app-component"> 
-           <StudentDetails/>
+          <Counter/>
+          <UserInput/>
+          <ToggleMessage/>
+          <ArrayComponent/>
+          <StudentDetails/>
        </div>
 )
 }

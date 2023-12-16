@@ -1,10 +1,6 @@
-import React from 'react'
-// import Button from 'react-bootstrap/Button';
+import React, { useState } from 'react'
+import './styles.css'
 import Student from './Student';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-
 
 const students = [
     {
@@ -77,6 +73,7 @@ const students = [
       skills: "PHP",
       imageUrl: "https://i.pravatar.cc/150?img=10"
     },
+    // Add more students...
     {
       id: 11,
       name: "Kate",
@@ -148,28 +145,15 @@ const students = [
       imageUrl: "https://i.pravatar.cc/150?img=20"
     },
   ];
-  
-  
 
 const StudentDetails = () => {
+    const [student] = useState(students)
   return (
-    <Container>
-        <Row>
-            <Col as='h1' xs={12} md={4} lg={3} className='heading'>Student Details</Col>
-            <Col as='h1' xs={12} md={4} lg={3} className='heading'>Student Details</Col>
-            <Col as='h1' xs={12} md={4} lg={3} className='heading'>Student Details</Col>
-            <Col as='h1' xs={12} md={4} lg={3} className='heading'>Student Details</Col>
-            <Col as='h1' xs={12} md={4} lg={3} className='heading'>Student Details</Col>
-            <h1 xs={12} md={4} lg={3} className='heading'>Student Details</h1>
-        </Row>
-        <Row>
-        <Col as='ul' xs={12} className='list-container'>
-            {students.map(student =>(
-                <Student studentData={student} key={student.id}/>
-            ))}
-        </Col>
-        </Row>
-    </Container>
+    <ul className='data'>
+        {student.map(each =>(
+            <Student studentData={each}/>
+        ))}
+    </ul>
   )
 }
 
