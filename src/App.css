@@ -37,7 +37,24 @@
   }
 }
 
-.app-component{
+.app-container{
+  border: 2px solid red;
   min-height: 100vh;
 }
 
+.res{
+  border: 2px solid blue;
+}
+
+.res-2{
+  border: 2px solid green;
+}
+
+
+.pages{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+}

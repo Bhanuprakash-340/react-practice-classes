@@ -6,7 +6,7 @@ let userDetails = {
     id:""
 }
 
-const Forms = () => {
+const Forms1 = () => {
     const [userInputs, setUserInputs] = useState(userDetails)
 
     const [displayData, setDisplayData] = useState([])
@@ -14,6 +14,7 @@ const Forms = () => {
     const handleInputs = (event) =>{
         const {name,value} = event.target 
         setUserInputs({...userInputs, [name]:value})
+       
     }
 
     const handleSubmit = (event) =>{
@@ -22,6 +23,7 @@ const Forms = () => {
         setUserInputs(userDetails)
     }
 
+  
   return (
     <div>
         <form onSubmit={handleSubmit}>
@@ -45,4 +47,4 @@ const Forms = () => {
   )
 }
 
-export default Forms
+export default Forms1

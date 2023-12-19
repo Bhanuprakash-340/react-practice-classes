@@ -4,6 +4,7 @@ import axios from 'axios'
 const FetchWithInComponent = () => {
     const [posts, setPosts] = useState([])
     const [todo, setTodos] = useState([])
+    const [search, setSearch] = useState('')
 
 useEffect(()=>{
     const getData = async () =>{
@@ -26,9 +27,21 @@ const handleDelete = (id) =>{
     setPosts(filtedData)
 }
 
+const handleSearch = (event) =>{
+    setSearch(event.target.value)
+}
+
+const handlePostsSearch = () =>{
+    const postsData = posts.filter(each => each.title.toLowerCase().includes(search.toLowerCase()))
+    setPosts(postsData)
+}
+
+const searchData = todo.filter(each => each.title.toLowerCase().includes(search.toLowerCase()))
 
   return (
     <div>
+        <input type="text" value={search} onChange={handleSearch} placeholder='enter text here....' />
+        <button onClick={handlePostsSearch}>Search</button>
         <h1>Data populating with in the component</h1>
         <ul>
             {posts.map(eachPost =>(
@@ -41,8 +54,9 @@ const handleDelete = (id) =>{
         </ul>
 
         <h1>Todos data</h1>
+        <input type='search' placeholder='search here...' value={search} onChange={handleSearch}/>
         <ul>
-            {todo.map(each =>(
+            {searchData.map(each =>(
                 <li key={each.id}>{each.title}</li>  
             ))}
         </ul>

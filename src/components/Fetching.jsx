@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import Posts from './Posts'
+import './Styles.css'
 
 const Fetching = () => {
     const [posts, setPosts] = useState([])
+    const [search, setSearch] = useState("")
 
 useEffect(()=>{
     const getData = async () =>{
@@ -24,16 +26,22 @@ const handleDelete = (id) =>{
     setPosts(filtedData)
 }
 
+const handleSearch = (event) =>{
+    setSearch(event.target.value)
+}
+
+const searchData = posts.filter(each => each.title.toLowerCase().includes(search.toLowerCase()))
+
 
   return (
-    <div>
-        <ul>
-            {posts.map(eachPost =>(
+         <div>
+            <input type="text" value={search} onChange={handleSearch}/>
+         {searchData.map(eachPost =>(
                <Posts postData={eachPost} key={eachPost.id} handleDelete={handleDelete}/>
             ))}
-        </ul>
-    </div>
+    </div>    
   )
 }
+
 
 export default Fetching
