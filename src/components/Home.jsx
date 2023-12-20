@@ -1,15 +1,9 @@
 import React from 'react'
-import { BsAirplaneFill } from "react-icons/bs";
-import { MdAccountBalance,MdAcUnit  } from "react-icons/md";
+import './Styles.css'
 
 const Home = () => {
   return (
-    <div className='pages'>
-        Home
-        <BsAirplaneFill/>
-        <MdAccountBalance/>
-        <MdAcUnit/>
-    </div>
+    <div className='home'>Home</div>
   )
 }
 

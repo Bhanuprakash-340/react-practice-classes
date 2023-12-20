@@ -1,0 +1,22 @@
+.navbar{
+    height: 10vh;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    background-color: #DAFCFC;
+}
+
+.nav-items-container{
+    width: 50%;
+    margin-right: 30px;
+}
+
+.nav-items-container a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+}
+
+.nav-items-container a.active{
+    border-bottom: 3px solid #1C8080;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+}

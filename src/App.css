@@ -58,3 +58,8 @@
   align-items: center;
   font-weight: 800;
 }
+
+.nav a.active{
+  font-weight: 800;
+  border-bottom: 4px solid green;
+}

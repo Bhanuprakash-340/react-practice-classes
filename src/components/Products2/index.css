@@ -1,0 +1,33 @@
+.main{
+    padding: 0px;
+}
+
+.products-container{
+    list-style-type: none;
+    padding: 0px;
+}
+
+.product2-img{
+    height: 120px;
+    width: 120px;
+}
+
+.each-product{
+    border: 1px solid red;
+    padding: 0px;
+}
+
+.sai h1{
+    border: 1px solid green;
+}
+
+/* .card{
+    height: 600px;
+} */
+
+.no-data{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

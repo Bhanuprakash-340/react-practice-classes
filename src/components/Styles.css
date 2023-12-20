@@ -1,41 +1,6 @@
-.fetch-container{
-    border: 2px solid green;
-    list-style-type: none;
-    padding: 0px;
-}
-
-
-.id{
-    border: 1px solid gray;
-    border-radius: 50%;
-    margin-right: 30px;
-    height: 30px;
-    width: 30px;
+.home{
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.home-page{
-    border: 2px solid green;
-    min-height: 100vh;
-}
-
-.nav a.active{
-    font-weight: 800;
-    border-bottom: 4px solid green;
-  }
-
-nav a button{
-    border: none;
-    margin: 5px;
-}
-
-.home{
-    border: 1px solid red;
-    text-align: center;
-}
-
-.red{
-    border: 2px solid red;
 }

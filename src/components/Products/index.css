@@ -1,0 +1,43 @@
+.product-container{
+    list-style-type: none;
+    padding: 0px;
+}
+
+.product-image{
+    height: 130px;
+    width: 130px;
+}
+
+.content-container{
+    border: 1px solid gray;
+    border-radius: 5px;
+    height: 450px;
+}
+
+.content-container h2{
+    font-size: 20px;
+}
+
+
+.content-container p{
+  font-size: 14px;
+  font-weight: 700;
+  max-height: 50px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.content-container p span{
+    font-size: 15px;
+    font-weight: 400;
+  }
+
+.search-bar{
+    width: 30%;
+    outline: none;
+    font-weight: 400;
+}
+
+.input-container{
+    border: 1px solid green;
+}
